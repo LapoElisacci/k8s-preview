@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: sample-spring-preview
+  name: k8s-preview-appset 
 spec:
   generators:
     - pullRequest:
@@ -11,7 +11,7 @@ spec:
           tokenRef:
             key: token
             secretName: github-token
-        requeueAfterSeconds: 5
+        requeueAfterSeconds: 300
   template:
     metadata:
       name: 'k8s-preview-{{branch}}-{{number}}'
@@ -30,10 +30,6 @@ spec:
               value: 'preview-{{branch}}'
             - name: version
               value: '{{head_sha}}'
-            - name: image
-              value: sample-kotlin-spring
-            - name: name
-              value: sample-spring-kotlin
       syncPolicy:
         automated:
           selfHeal: true
