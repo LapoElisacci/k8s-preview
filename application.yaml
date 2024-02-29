@@ -5,10 +5,12 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: k8s-preview 
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    repoURL: https://github.com/LapoElisacci/k8s-preview.git
-    path: .
-    targetRevision: main 
+namespace: k8s-preview
+server: https://kubernetes.default.svc
+project: default
+source:
+repoURL: https://github.com/LapoElisacci/k8s-preview.git
+path: .
+targetRevision: main 
+syncPolicy:
+automated: {}
