@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: k8s-preview
+  namespace: argocd
+spec:
+  destination:
+    namespace: k8s-preview 
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: https://github.com/LapoElisacci/k8s-preview.git
+    path: .
+    targetRevision: main 
