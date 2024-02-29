@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: k8s-preview 
+  namespace: argocd
+spec:
+  generators:
+  - pullRequest:
+      github:
+        owner: LapoElisacci
+        repo: k8s-preview
+      requeueAfterSeconds: 5 
+  template:
+    metadata:
+      name: 'k8s-preview-{{branch}}-{{number}}'
+    spec:
+      source:
+        repoURL: 'https://github.com/LapoElisacci/k8s-preview.git'
+        targetRevision: '{{head_sha}}'
+        path: . 
+      project: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: 'k8s-preview-{{branch}}-{{number}}'
