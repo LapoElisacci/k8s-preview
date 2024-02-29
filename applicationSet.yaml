@@ -9,7 +9,7 @@ spec:
       github:
         owner: LapoElisacci
         repo: k8s-preview
-      requeueAfterSeconds: 5 
+      requeueAfterSeconds: 300 
   template:
     metadata:
       name: 'k8s-preview-{{branch}}-{{number}}'
