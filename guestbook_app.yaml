@@ -132,7 +132,7 @@ spec:
     spec:
       containers:
       - name: php-redis
-        image: gcr.io/google-samples/gb-frontend@sha256:e5233a1e2a6dc9c4ae1d1b754e3a3f62ecdc1da81b31422aff4e7390a0c6e534
+        image: gcr.io/google-samples/gb-frontend@sha256:9587be21f54a9dc04e1f37b83a9d120231b205385d8deba0682d6fb22088e7c9
         resources:
           requests:
             cpu: 100m
