@@ -12,7 +12,7 @@ spec:
           tokenRef:
             key: token
             secretName: github-token
-        requeueAfterSeconds: 300
+        requeueAfterSeconds: 180 
   template:
     metadata:
       name: 'k8s-preview-{{branch}}-{{number}}'
