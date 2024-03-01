@@ -8,10 +8,7 @@ spec:
   - pullRequest:
       github:
         owner: LapoElisacci
-        repo: k8s-preview
-        tokenRef:
-          key: token
-          secretName: github-token
+        repo: k8s-preview 
       requeueAfterSeconds: 300 
   template:
     metadata:
