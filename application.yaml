@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-preview-app
+  name: 'k8s-preview-app-{{ randAlphaNum 5 | quote }}'
 spec:
   destination:
     namespace: k8s-preview
