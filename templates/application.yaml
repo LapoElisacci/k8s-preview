@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/LapoElisacci/k8s-preview.git
-    path: .
+    path: . 
     targetRevision: main 
   syncPolicy:
     automated: {} 
