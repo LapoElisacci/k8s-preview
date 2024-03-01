@@ -9,6 +9,9 @@ spec:
       github:
         owner: LapoElisacci
         repo: k8s-preview
+        tokenRef:
+          key: token
+          secretName: github-token
       requeueAfterSeconds: 300 
   template:
     metadata:
