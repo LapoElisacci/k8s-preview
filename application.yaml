@@ -11,9 +11,6 @@ spec:
   source:
     repoURL: https://github.com/LapoElisacci/k8s-preview.git
     path: .
-    targetRevision: main
+    targetRevision: main 
   syncPolicy:
-    automated:
-      prune: true
-      allowEmpty: true
-      selfHeal: true
+    automated: {} 
