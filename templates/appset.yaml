@@ -1,7 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: k8s-preview-appset 
+  name: k8s-preview-appset
+  namespace: argocd
 spec:
   generators:
     - pullRequest:
