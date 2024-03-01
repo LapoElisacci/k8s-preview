@@ -13,4 +13,6 @@ spec:
     path: .
     targetRevision: main
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      allowEmpty: true
